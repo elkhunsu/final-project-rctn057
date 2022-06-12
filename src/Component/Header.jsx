@@ -1,13 +1,12 @@
 import React from "react";
 import { AppBar, Box, Toolbar } from "@mui/material";
-import {Button, Typography} from '@mui/material';
+import { Typography } from '@mui/material';
 import SearchBar from "./SearchBar";
 
-const Header = () => {
-
+const Header = (props) => {
   return (
     <Box sx={{ flexGrow: 1, marginBottom: 8 }}>
-      <AppBar position="static" sx={{backgroundColor:"#e65856"}}>
+      <AppBar position="static" sx={{ backgroundColor: "#e65856" }}>
         <Toolbar>
           <Typography
             variant="h6"
@@ -15,12 +14,12 @@ const Header = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, textAlign: "left" }}
           >
-            MUI
+            FinProH8
           </Typography>
-          <SearchBar />
+          <SearchBar Value={props.Value} onChangeText={props.onChange} onSubmit={props.onSubmit} onClear={props.onClear} onSubmitEnter={props.onSubmitEnter} />
         </Toolbar>
       </AppBar>
-      </Box>
+    </Box>
   )
 }
 

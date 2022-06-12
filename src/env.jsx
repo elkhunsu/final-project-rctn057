@@ -1,5 +1,6 @@
 const ENV = {
-  host: "https://www.omdbapi.com/?apikey=4db957b3&"
+  //add apikey here http://www.omdbapi.com/apikey.aspx
+  apiKey: ""
 }
 
 export default ENV;
